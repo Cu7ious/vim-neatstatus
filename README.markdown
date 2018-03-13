@@ -1,20 +1,17 @@
 Neat Status Line
 ===
 
-[![endorse](https://api.coderwall.com/luke/endorsecount.png)](https://coderwall.com/luke)
+```
+             _   _            _   ____  _        _
+            | \ | | ___  __ _| |_/ ___|| |_ __ _| |_ _   _ ___
+            |  \| |/ _ \/ _` | __\___ \| __/ _` | __| | | / __|
+            | |\  |  __/ (_| | |_ ___) | || (_| | |_| |_| \__ \
+            |_| \_|\___|\__,_|\__|____/ \__\__,_|\__|\__,_|___/
+```
 
-Yet another status line plugin. The aim of Neat Status is to provide neat, and 
+Yet another status line plugin. The aim of Neat Status is to provide neat, and
 simple UI with just basic information and no bells and whistles for those users
 who consider things like Powerline to be overkill.
-
-Neat Status is loosely based on the status line script created by Tomas Restrepo.
-The original can be seen here:
-
-  * http://winterdom.com/2007/06/vimstatusline
-
-The basic idea is roughly the same, but the script was heavily modified and made
-more customizable and modular to work better as a plugin rather than just a
-`.vimrc` snippet.
 
 **Note:** this is not a drop-in replacement for Powerline but rather a much
 simpler and streamlined plugin. The aim of the project is not to achieve one
@@ -31,37 +28,27 @@ Here is how this status line will look in Gvim on Windows with the Solarized col
 
 Information provided from left to right:
 
-* Mode Indicator - changes color depending on the editor mode
-* Server/Session - displays vim servername (graphical) or terminal name (cli)
-* File path for the file associated with current buffer
-* File type (eg. python, ruby, etc..)
-* File format (eg. unix, dos, etc..)
-* File encoding (eg. utf8, latin1, etc..)
-* Buffer number
-* Current line, total number of lines (purple box)
-* Percentage of file read
-* Relative column number (from first character)
-* Absolute column number (from start of line)
-* Modified / Unmodified (blue box)
+1. Mode Indicator - changes color depending on the editor mode
+2. Session - displays vim terminal name (eg. tmux, term)
+3. File path for the file associated with current buffer
+4. File type (eg. python, ruby, etc..)
+5. File format (eg. unix, dos, etc..)
+6. File encoding (eg. utf8, latin1, etc..)
+7. Buffer number
+8. Current line, total number of lines (purple box)
+9. Percentage of file read
+10. Relative & absolute column number (from 1st character / from start of line)
+11. Modified / Unmodified indicator
 
 Installation
 ---
 
-To install with Pathogen:
-
-    cd ~/.vim/bundle
-    git clone git://github.com/maciakl/vim-neatstatus.git
-
-If your .vim is under source control with Git do this instead:
-
-    cd ~/.vim
-    git submodule add git://github.com/maciakl/vim-neatstatus.git bundle/vim-neatstatus
-    git submodule init
-    git submodule update
-
-Installing without pathogen:
-
-  * Copy `neatstatus.vim` to `~/.vim/after/plugins` directory
+Installing with Vundle:
+  * Put this into your `.vimrc` under your Vundle section:
+```
+Bundle 'Cu7ious/vim-neatstatus'
+```
+  * Execute `:PluginInstall`
 
 Configuration
 ---
@@ -83,7 +70,7 @@ a quick example that shows you hot to redefine the insert mode colors:
 
 Note that these only affect the small boxes created by NeatStatus. Your status line will remain
 the default color as per your color scheme. This works very well if you also happen to use the
-Obvious-Mode plugin. 
+Obvious-Mode plugin.
 
 If you want to style your status line, you can do it in your `.vimrc` normally using the `hi StatusLine`
 and `hi StatusLineNC` commands.
@@ -94,5 +81,5 @@ You can also change the separator character that divides the boxes by changing:
 
 By default the separator is set to the pipe `|` character. You can disable the separator by setting it to empty string.
 
-[ns]: http://i.imgur.com/7ySiHql.png "Neat Statusline"
+[ns]: https:// "Neat Statusline"
 [va]: https://github.com/bling/vim-airline
