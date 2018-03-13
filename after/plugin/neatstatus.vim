@@ -1,7 +1,7 @@
 " NeatStatus (c) 2012 Lukasz Grzegorz Maciak
 " Neat and simple status line - because Powerline is overrated
-"    _   _            _   ____  _        _             
-"   | \ | | ___  __ _| |_/ ___|| |_ __ _| |_ _   _ ___ 
+"    _   _            _   ____  _        _
+"   | \ | | ___  __ _| |_/ ___|| |_ __ _| |_ _   _ ___
 "   |  \| |/ _ \/ _` | __\___ \| __/ _` | __| | | / __|
 "   | |\  |  __/ (_| | |_ ___) | || (_| | |_| |_| \__ \
 "   |_| \_|\___|\__,_|\__|____/ \__\__,_|\__|\__,_|___/
@@ -61,7 +61,7 @@ endfunc
 function! Mode()
     redraw
     let l:mode = mode()
-    
+
     " if     mode ==# "n"  | exec 'hi User1 '.g:NeatStatusLine_color_normal  | return "NORMAL"
     " elseif mode ==# "i"  | exec 'hi User1 '.g:NeatStatusLine_color_insert  | return "INSERT"
     " elseif mode ==# "R"  | exec 'hi User1 '.g:NeatStatusLine_color_replace | return "REPLACE"
@@ -76,7 +76,7 @@ function! Mode()
     elseif mode ==# "" | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "B"
     else                 | return l:mode
     endif
-endfunc    
+endfunc
 
 "==============================================================================
 "==============================================================================
