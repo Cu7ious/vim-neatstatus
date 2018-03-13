@@ -2,11 +2,11 @@ Neat Status Line
 ===
 
 ```
-             _   _            _   ____  _        _
-            | \ | | ___  __ _| |_/ ___|| |_ __ _| |_ _   _ ___
-            |  \| |/ _ \/ _` | __\___ \| __/ _` | __| | | / __|
-            | |\  |  __/ (_| | |_ ___) | || (_| | |_| |_| \__ \
-            |_| \_|\___|\__,_|\__|____/ \__\__,_|\__|\__,_|___/
+                           _   _            _   ____  _        _
+                          | \ | | ___  __ _| |_/ ___|| |_ __ _| |_ _   _ ___
+                          |  \| |/ _ \/ _` | __\___ \| __/ _` | __| | | / __|
+                          | |\  |  __/ (_| | |_ ___) | || (_| | |_| |_| \__ \
+                          |_| \_|\___|\__,_|\__|____/ \__\__,_|\__|\__,_|___/
 ```
 
 Yet another status line plugin. The aim of Neat Status is to provide neat, and
@@ -22,7 +22,7 @@ robust, feature-full Powerline replacement you should check out [Vim-Airline][va
 Screenshots
 -----------
 
-Here is how this status line will look in Gvim on Windows with the Solarized color scheme:
+Here is how this status line will look in vim on Mac Terminal with the Monokai color scheme:
 
 ![Neat Statusline][ns]
 
@@ -81,5 +81,5 @@ You can also change the separator character that divides the boxes by changing:
 
 By default the separator is set to the pipe `|` character. You can disable the separator by setting it to empty string.
 
-[ns]: https:// "Neat Statusline"
+[ns]: https://github.com/Cu7ious/vim-neatstatus/raw/master/Vim-neatstatus.png "Neat Statusline"
 [va]: https://github.com/bling/vim-airline
