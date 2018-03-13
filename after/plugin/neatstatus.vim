@@ -8,8 +8,11 @@
 "   Vim plugin by Luke Maciak (c) 2012
 "
 " Loosely based on a script by Tomas Restrepo (winterdom.com)
-" " Original available here:
+" Original available here:
 " http://winterdom.com/2007/06/vimstatusline
+" "
+" " Forked & modified by Cu7ious @ 2018
+" "
 
 set ls=2 " Always show status line
 let g:last_mode=""
