@@ -59,12 +59,18 @@ function! Mode()
     redraw
     let l:mode = mode()
     
-    if     mode ==# "n"  | exec 'hi User1 '.g:NeatStatusLine_color_normal  | return "NORMAL"
-    elseif mode ==# "i"  | exec 'hi User1 '.g:NeatStatusLine_color_insert  | return "INSERT"
-    elseif mode ==# "R"  | exec 'hi User1 '.g:NeatStatusLine_color_replace | return "REPLACE"
-    elseif mode ==# "v"  | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "VISUAL"
-    elseif mode ==# "V"  | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "V-LINE"
-    elseif mode ==# "" | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "V-BLOCK"
+    " if     mode ==# "n"  | exec 'hi User1 '.g:NeatStatusLine_color_normal  | return "NORMAL"
+    " elseif mode ==# "i"  | exec 'hi User1 '.g:NeatStatusLine_color_insert  | return "INSERT"
+    " elseif mode ==# "R"  | exec 'hi User1 '.g:NeatStatusLine_color_replace | return "REPLACE"
+    " elseif mode ==# "v"  | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "VISUAL"
+    " elseif mode ==# "V"  | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "V-LINE"
+    " elseif mode ==# "" | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "V-BLOCK"
+    if     mode ==# "n"  | exec 'hi User1 '.g:NeatStatusLine_color_normal  | return "N"
+    elseif mode ==# "i"  | exec 'hi User1 '.g:NeatStatusLine_color_insert  | return "I"
+    elseif mode ==# "R"  | exec 'hi User1 '.g:NeatStatusLine_color_replace | return "R"
+    elseif mode ==# "v"  | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "V"
+    elseif mode ==# "V"  | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "L"
+    elseif mode ==# "" | exec 'hi User1 '.g:NeatStatusLine_color_visual  | return "B"
     else                 | return l:mode
     endif
 endfunc    
@@ -132,7 +138,8 @@ if has('statusline')
                 " Giving preference to color-term because that might be more
                 " meaningful in graphical environments. Eg. my $TERM is
                 " usually screen256-color 90% of the time.
-                let g:neatstatus_session = exists("$COLORTERM") ? $COLORTERM : $TERM
+                " let g:neatstatus_session = exists("$COLORTERM") ? $COLORTERM : $TERM
+                let g:neatstatus_session = 'term'
             endif
         else
             " idk, my bff jill
@@ -170,7 +177,7 @@ if has('statusline')
         " column number (minimum width is 4)
         let &stl.="COL %-3.c "
         " modified / unmodified (purple)
-        let &stl.="%(%6* %{&modified ? 'modified':''} %)"
+        let &stl.="%(%6* %{&modified ? 'm':''} %)"
 
     endfunc
 
